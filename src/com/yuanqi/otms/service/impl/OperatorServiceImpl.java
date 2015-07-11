@@ -1,8 +1,11 @@
 package com.yuanqi.otms.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+
 import com.yuanqi.otms.mapper.OperatorMapperCustom;
+import com.yuanqi.otms.po.Operator;
 import com.yuanqi.otms.po.OperatorCustom;
+import com.yuanqi.otms.po.OperatorVo;
 import com.yuanqi.otms.service.OperatorService;
 
 /**   
@@ -21,6 +24,9 @@ public class OperatorServiceImpl implements OperatorService{
 	
 	@Autowired
 	private OperatorMapperCustom operatorMapperCustom;
+	
+	
+	
 
 	/* (non-Javadoc)
 	 * @see com.yuanqi.otms.service.OperatorService#getOperator(java.lang.String, java.lang.String)
@@ -29,7 +35,11 @@ public class OperatorServiceImpl implements OperatorService{
 	public OperatorCustom getOperator(String username)
 			throws Exception {
 		// TODO Auto-generated method stub
-		return null;
+		OperatorCustom operatorcustom=new OperatorCustom();
+		operatorcustom.setOid(username);
+		OperatorVo operatorvo=new OperatorVo();
+		operatorvo.setOperatorCustom(operatorcustom);
+		return operatorMapperCustom.getOperator(operatorvo);
 	}
 	
 	

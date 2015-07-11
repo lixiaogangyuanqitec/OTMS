@@ -2,7 +2,7 @@ package com.yuanqi.otms.mapper;
 
 
 import com.yuanqi.otms.po.OperatorCustom;
-import com.yuanqi.otms.po.OperatorQueryVo;
+import com.yuanqi.otms.po.OperatorVo;
 
 /**
  * 
@@ -14,8 +14,8 @@ import com.yuanqi.otms.po.OperatorQueryVo;
 * @version V1.0
  */
 public interface OperatorMapperCustom {
-	//按用户名和密码查询用户信息
-	public OperatorCustom getOperator(OperatorQueryVo toperatorQueryVo)
+	//按用户名查询用户信息
+	public OperatorCustom getOperator(OperatorVo operatorvo)
 			throws Exception;
-
+	
 }

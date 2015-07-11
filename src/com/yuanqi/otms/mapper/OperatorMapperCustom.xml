@@ -25,7 +25,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	parameterType：输入 查询条件
 	-->
 	
-	<select id="getOperator" parameterType="com.yuanqi.otms.po.OperatorQueryVo" 
+	<select id="getOperator" parameterType="com.yuanqi.otms.po.OperatorVo" 
 			resultType="com.yuanqi.otms.po.OperatorCustom">
 		SELECT * FROM t_operator 
 		<where>
