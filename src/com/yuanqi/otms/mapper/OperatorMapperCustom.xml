@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yuanqi.otms.mapper.OperatorMapperCustom">
+
+	<!-- 用户查询的sql片段
+	建议是以单表为单位定义查询条件
+	建议将常用的查询条件都写出来
+	 -->
+	<sql id="query_operator_where">
+		<if test="operatorCustom!=null">
+			<if test="operatorCustom.name!=null and operatorCustom.name!=''">
+				and  name = #{operatorCustom.name}
+			</if>
+			<if test="operatorCustom.oid!=null and operatorCustom.oid!=''">
+				and  oid = #{operatorCustom.oid}
+			</if>
+		
+		</if>
+		
+	</sql>
+	
+	<!-- 用户查询 
+	parameterType：输入 查询条件
+	-->
+	
+	<select id="getOperator" parameterType="com.yuanqi.otms.po.OperatorQueryVo" 
+			resultType="com.yuanqi.otms.po.OperatorCustom">
+		SELECT * FROM t_operator 
+		<where>
+			<include refid="query_operator_where"/>
+		</where>
+	</select>
+
+
+</mapper>
