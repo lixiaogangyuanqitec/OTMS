@@ -3,7 +3,6 @@ package com.yuanqi.otms.service.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.yuanqi.otms.mapper.OperatorMapperCustom;
-import com.yuanqi.otms.po.Operator;
 import com.yuanqi.otms.po.OperatorCustom;
 import com.yuanqi.otms.po.OperatorVo;
 import com.yuanqi.otms.service.OperatorService;
