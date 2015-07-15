@@ -7,6 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.yuanqi.otms.exception.CustomException;
 import com.yuanqi.otms.po.Operator;
 import com.yuanqi.otms.po.OperatorCustom;
 import com.yuanqi.otms.service.OperatorService;
@@ -30,6 +31,7 @@ public class OperatorController {
 	public ModelAndView  queryOperator(String username,String password) throws Exception {
 		Operator operatorCustom =operatorService.getOperator(username);
 		if(operatorCustom==null){
+			//throw new CustomException("用户名错误");
 			return new ModelAndView("/login/login", "res","用户名错误");
 		}else{
 			return new ModelAndView("/login/login", "res","用户名正确");

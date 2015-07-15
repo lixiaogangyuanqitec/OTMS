@@ -1,4 +1,6 @@
 eclipse.preferences.version=1
 encoding//src/com/yuanqi/otms/controller/converter/CustomDateConverter.java=UTF-8
 encoding//src/com/yuanqi/otms/controller/converter/StringTrimConverter.java=UTF-8
+encoding//src/com/yuanqi/otms/exception/CustomException.java=UTF-8
+encoding//src/com/yuanqi/otms/exception/CustomExceptionResolver.java=UTF-8
 encoding//src/com/yuanqi/otms/mapper/OperatorMapperCustom.java=UTF-8

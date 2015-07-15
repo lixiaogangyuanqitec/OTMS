@@ -39,7 +39,10 @@
 		<property name="prefix" value="/WEB-INF/jsp/" />
 		<property name="suffix" value=".jsp" />
 	</bean>
-
+	
+	
+	<!-- 定义统一异常处理器 -->
+	<bean class="com.yuanqi.otms.exception.CustomExceptionResolver"></bean>
 	
 	
 
